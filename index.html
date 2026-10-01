@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="hero">
+
+            <h1>🎓 EduGenie AI</h1>
+
+            <p class="tagline">
+                Google Gemini Powered Learning Assistant
+            </p>
+
+            <h2>
+                Learn Smarter with EduGenie
+            </h2>
+
+            <p>
+                Ask questions, get simple explanations,
+                summarize topics and practice with quizzes.
+            </p>
+
+        </header>
+
+
+        <section class="input-card">
+
+            <label for="question">
+                What do you want to learn?
+            </label>
+
+            <textarea
+                id="question"
+                placeholder="Example: What is Artificial Intelligence?">
+            </textarea>
+
+
+            <div class="buttons">
+
+                <button onclick="askAI('ask')">
+                    💬 Ask AI
+                </button>
+
+                <button onclick="askAI('explain')">
+                    📖 Explain
+                </button>
+
+                <button onclick="askAI('summarize')">
+                    📄 Summarize
+                </button>
+
+                <button onclick="askAI('quiz')">
+                    🧠 Quiz
+                </button>
+
+                <button onclick="askAI('study')">
+                    📚 Study Plan
+                </button>
+
+            </div>
+
+
+            <div id="loading" class="loading">
+                Thinking...
+            </div>
+
+        </section>
+
+
+        <section class="response-card">
+
+            <h2>
+                AI Response
+            </h2>
+
+            <div id="result" class="result">
+                Your answer will appear here.
+            </div>
+
+        </section>
+
+
+        <footer>
+            EduGenie AI © 2026
+        </footer>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
